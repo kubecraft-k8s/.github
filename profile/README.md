@@ -15,3 +15,6 @@ Helm chart that holds cluster-api definitions to spin up a cluster on hetzner
 
 ### kubecraft-library
 Library chart that holds common configuration, e.g. ghcr.io or bitnami HelmRepository for flux
+
+### kubecraft-flux-bootstrap
+git repository to provision the bootstrap cluster using flux
