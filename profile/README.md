@@ -1,4 +1,4 @@
-![kubecraft logo](logo.jpg)
+![kubecraft logo](profile/logo.jpg)
 
 # kubecraft
 crafting kubernetes with a single command
