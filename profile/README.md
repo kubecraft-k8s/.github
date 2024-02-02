@@ -1,20 +1,31 @@
+![kubecraft logo](logo.jpg)
+
 # kubecraft
+crafting kubernetes with a single command
 
-kubecraft is a cluster manager utilizing the open source tools kind, flux and and cluster-api.
+# Quick start
+```shell
+cd kubecraft-cli
+cp .env.example .env
+./kubecraft.sh
+```
 
-You bring your configuration in the form of a flux github repository and kubecraft does the rest.
+## Goal
 
-# modules
-kubecraft is split into multiple modules
+> This is a work in progress project which will gradually evolve over time. In this section I will explain what my goal is,
+> but please be aware that this goal is still far away. However, I want to continuously improve this project and start with
+> what brings the most benefit.
 
-### kubecraft-kind
-Used to spin up a kind cluster, install flux and cluster api and sync the provided repository
+The goal is to create a simple to use singlecommand kubernetes setup. To achieve this I'm heavily relying on automation,
+namely the ClusterAPI specification. The config is also specified in a single git repository, making it easy to completely
+teardown a cluster and recreate it.
 
-### kubecraft-hetzner
-Helm chart that holds cluster-api definitions to spin up a cluster on hetzner
+## Requirements
 
-### kubecraft-library
-Library chart that holds common configuration, e.g. ghcr.io or bitnami HelmRepository for flux
+- kubectl
+- helm
+- kind to bootstrap a temporary cluster
+- hetzner cloud account
+- a git repository holding your flux api definitions
 
-### kubecraft-flux-bootstrap
-git repository to provision the bootstrap cluster using flux
+
